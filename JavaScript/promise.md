@@ -131,7 +131,6 @@ getData().then(function(data){  //순차적으로 실행..
 
 ## 위에서 생성한 호출 함수를 Promise로 바꿔보면?
 ```js
-
 function promiseDelay(sec) {
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
