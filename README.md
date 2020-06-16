@@ -3,4 +3,4 @@
 + 이해한것만! `직접 작성` 하기
 + 내것으로 만들려고 노력하자!
 - - - 
-[주인장 블로그 <<](https://blog.naver.com/yondo123)
+[블로그 <<](https://blog.naver.com/yondo123)
