@@ -129,7 +129,7 @@ getData().then(function(data){  //순차적으로 실행..
 
 ```
 
-## 위에서 생성한 호출 함수를 Promise로 바꿔보면?
+### 위에서 생성한 호출 함수를 Promise로 바꿔보면?
 ```js
 function promiseDelay(sec) {
     return new Promise((resolve, reject)=>{
@@ -145,5 +145,26 @@ promiseDelay(1).then((res)=>{
 })
 .then((res)=>{
     console.log(2,res);
+})
+```
+
+### `return resolve()`와 `resolve()`차이
++ 일반 함수 return과 유사, 정상적인 return으로 해당 블록에서 함수 종료
+```js
+return new Promise((resolve, reject) => {
+  attach.readFile((err, data) => {
+    if (err) reject(err)
+    return resolve(data) //return
+    console.log('success') // 로그 미출력
+  })
+})
+```
+```js
+return new Promise((resolve, reject) => {
+  attach.readFile((err, data) => {
+    if (err) reject(err)
+    resolve(data)
+    console.log('success') // 출력
+  })
 })
 ```
