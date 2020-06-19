@@ -20,7 +20,7 @@
         context 2
     */
     ```
-    ![context](../ETC/img/context.jpg "context")
+    ![context](https://user-images.githubusercontent.com/46988995/85142723-c1cb2f80-b283-11ea-928f-23d19379796c.jpg)
 
 ### (1)함수 실행시 컨텍스트 생성 과정
 ```js
@@ -55,7 +55,7 @@
     ```
     + 현재 실행 컨텍스트 내부에서 사용되는 `지역 변수`를 생성
     + `변수 or 내부 함수`를 메모리에 생성하지만, 초기화는 해당 표현식이 실행되기 전까지 이루어지지 않는다.
-    ![object](../ETC/img/object.jpg "object")
+    ![object](https://user-images.githubusercontent.com/46988995/85142612-9f391680-b283-11ea-9147-1b9762fabbfe.jpg)
 
 5. **this 바인딩**
     + `this` 키워드를 사용하는 값이 할당된다.
