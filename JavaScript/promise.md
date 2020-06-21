@@ -70,12 +70,13 @@ promise.js:28
 
 프로미스의 3가지 상태 (대기 - 이행 - 실패)
 1. 대기는 프로미스를 생성자로 호출한 순간이다.
-```js
-//콜백함수 선언 (인자는 resolve, reject)
-new Promise(function(resolve, reject){
-	//code..
-});
-```
+    + Promise 객체를 호출하는 순간, 내부 함수는 곧바로 실행된다. 
+    ```js
+    //콜백함수 선언 (인자는 resolve, reject)
+    new Promise(function(resolve, reject){
+        //code..
+    });
+    ```
 2. `resolve`를 실행할 시 이행 상태가 된다.
 ```js
 new Promise(function(resolve, reject){
@@ -149,22 +150,41 @@ promiseDelay(1).then((res)=>{
 ```
 
 ### `return resolve()`와 `resolve()`차이
-+ 일반 함수 return과 유사, 정상적인 return으로 해당 블록에서 함수 종료
-```js
-return new Promise((resolve, reject) => {
-  attach.readFile((err, data) => {
-    if (err) reject(err)
-    return resolve(data) //return
-    console.log('success') // 로그 미출력
-  })
-})
-```
-```js
-return new Promise((resolve, reject) => {
-  attach.readFile((err, data) => {
-    if (err) reject(err)
-    resolve(data)
-    console.log('success') // 출력
-  })
-})
-```
++ 일반 함수 return과 동일, 정상적인 return으로 해당 블록에서 함수 종료
+    ```js
+    return new Promise((resolve, reject) => {
+    attach.readFile((err, data) => {
+        if (err) reject(err)
+        return resolve(data) //return
+        console.log('success') // 로그 미출력
+    })
+    })
+    ```
+    ```js
+    return new Promise((resolve, reject) => {
+    attach.readFile((err, data) => {
+        if (err) reject(err)
+        resolve(data)
+        console.log('success') // 출력
+    })
+    })
+    ```
++ `catch` 문 내부에서 `return`을 이용하여 에러를 효율적으로 처리할 수 있다.
+    ```js
+        //대표적인 비동기 함수인 setTimeout으로 대체!
+        const getUserInfo = () =>
+            new Promise((resolve, reject) => {
+                setTimeout(() => resolve({id:'abc', pw:'qwerty'}),1000);
+            })
+        
+        const executeHandler = userInfo =>
+            new Promise((resolve, reject) => {
+                console.log(JSON.stringify(userInfo));
+                setTimeout(() => reject(new Error('fail process')), 1000);
+            });
+
+        getUserInfo()
+            .then(userInfo => executeHandler(userInfo)) //인자와 콜백이 각각 1개라면, .then(userInfo)로 축약 가능
+            .catch(error => {return `'${error}' handlling success!!`}) //promise Chain, 오류가 발생하더라도 다시 값을 처리해 .then(result)로 넘길 수 있다.
+            .then(result => console.log(result));
+    ```
