@@ -15,11 +15,72 @@
         return this.name;
     }
 
-    Fruist.prototype.getPrice = function(){
+    Fruits.prototype.getPrice = function(){
         return this.price;
     }
 
     const tomato = new Fruits('tomato', 1000); //인스턴스 생성
-    tomato.getname(); //'tomato'
+    tomato.getName(); //'tomato'
     tomato.getPrice(); //1000
 ```
+
+
+### ECMA6 에서 등장한 `Classes`
++ 기존 ECMA2015 까지 함수 방식으로 class를 선언해야 했지만, 이는 `Hoisting` 문제에 취약점을 가지고 있었다.
+    - `함수기반` 이니까 호이스팅 되는것은 당연하다!
++ 해결방안으로 ECMA6에서 `class` 문법을 정식으로 제공한다.
++ 정의
+    - `class`선언을 통해 클래스를 정의한다.
+    - `constructor` 메소드는 클래스 안에 단 한 개만 존재할 수 있다.
+
+        ```js
+        class Fruits {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            getPrice() {
+                return this.price;
+            }
+        }
+
+        const apple = new Fruits('apple', 1500);
+        console.log(apple.name); //apple
+        console.log(apple.getName()); //apple
+        console.log(apple.price); //1500
+        console.log(apple.getPrice()); //1500
+
+        ```
+### `static` 메소드
++ 정적 메소드 정의, 클래스의 인스턴스에서 호출하는 것이 아닌 `클래스를 통해 호출`된다.
++ 공용으로 사용되는 유틸리티성 함수에 주로 사용한다.
+    ```js
+        class Fruits {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+            
+            static showMessage(fruit){
+                const message = `${fruit.name}의 가격은 : ${fruit.price} 원 입니다.`
+                return message;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            getPrice() {
+                return this.price;
+            }
+        }
+
+        const apple = new Fruits('apple', 1500);
+        console.log(Fruits.showMessage(apple)); //apple의 가격은 : 1500 원 입니다.
+        console.log(apple.showMessage()); //error : apple.showMessage is not a function
+    ```
