@@ -5,7 +5,7 @@
 [블로그 <<](https://yondo123.github.io/)
 - - -
 ## INDEX
-[JavaScript](/javascript)
+[JavaScript](https://github.com/yondo123/LearningArchive/tree/master/JavaScript)
 
-[SQL](/sql)
+[SQL](https://github.com/yondo123/LearningArchive/tree/master/SQL)
 - - -
