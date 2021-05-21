@@ -1,4 +1,4 @@
-## Const-let
+## const-let
 ### const
 블록 문맥 내에서 재할당할 수 없는 변수 선언 방식.  
 값을 할당할 수 없는 것이지 원래의 값을 바꿀 수 없는 것은 아니다.  
@@ -58,7 +58,7 @@ function countSec(seconds) {
 countSec(3);
 ```
 
-**클로저를 사용한 해결방법**
+**클로저를 사용한 해결방법**  
 클로저를 사용해 해결할 수 있으나 가독성이 조금 떨어지고 복잡하다.
 ```js
 function countSec(seconds) {
@@ -73,7 +73,7 @@ function countSec(seconds) {
 
 countSec(3);
 ```
-**let을 사용한 방법**
+**let을 사용한 방법**  
 `let`을 사용한다면, 블록 유효 범위를 따르므로 해당 블록에서만 유효하다.  
 (반복되어 값이 바뀌더라도, 이전에 선언한 함수는 바뀌지 않는다.)
 ```js
