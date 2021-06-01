@@ -36,6 +36,7 @@
   + [**프로미스**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Modern-ECMA/promise.md)
   + [**Async-Await**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Modern-ECMA/async-await.md)
   + [**import-export**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Modern-ECMA/import-export.md)
+  + [**속성 메서드**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Modern-ECMA/object-literals.md)
 + **디자인 패턴**
   + [**타이머**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Pattern/Timer.md)
   + [**클래스 구현**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Pattern/class.md)
