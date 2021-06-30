@@ -49,7 +49,7 @@
   + [**카카오2019-인형뽑기**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Algorithm/kakao2019_crane.js)
 
 ### Vue
-  + [**Vue 기본 구조**](https://github.com/yondo123/LearningArchive/blob/master/vue/vue-start.md)
+  + [**Vue 기본 구조**](https://github.com/yondo123/LearningArchive/blob/master/Vue/vue-start.md)
 
 ### Database
 + **SQLite**
