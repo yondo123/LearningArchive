@@ -47,7 +47,7 @@ new Vue({
 ```
 
 ## 컴포넌트 통신 방식
-![components](https://user-images.githubusercontent.com/46988995/124051330-4041dc00-da57-11eb-9132-9c411b842f3a.png)
+![components](https://user-images.githubusercontent.com/46988995/124051330-4041dc00-da57-11eb-9132-9c411b842f3a.png)  
 Vue 컴포넌트는 각 고유한 데이터 유효범위를 갖는다.  
 부모 컴포넌트의 데이터가 바뀌면 하위 컴포넌트의 데이터가 바뀌지만, 반대로 하위 컴포넌트의 데이터가 바뀌면 부모 컴포넌트가 바뀌지 않는다. `(단방향 흐름)`  
 
@@ -120,11 +120,11 @@ props와는 반대로 하위 컴포넌트에서 상위 컴포넌트로 이벤트
 
 ## 동등 컴포넌트 간 통신
 + **내가 생각하는 컴포넌트 통신**
-    ![same-level](https://user-images.githubusercontent.com/46988995/124051372-594a8d00-da57-11eb-8f33-0098bb609870.png)
+    ![same-level](https://user-images.githubusercontent.com/46988995/124051372-594a8d00-da57-11eb-8f33-0098bb609870.png)  
     실제로 기존 DOM 조작 방식(JQuery)에 익숙한 나는 위의 사진처럼 종속관계가 아니어도 값을 주고받을 수 있을줄 알았으나, 아래와 같이 해야한다고 한다. 
 
 + **실제 컴포넌트 통신 방법**
-    ![components-com](https://user-images.githubusercontent.com/46988995/124051382-5fd90480-da57-11eb-8a4d-7c7ba02b3f41.png)
+    ![components-com](https://user-images.githubusercontent.com/46988995/124051382-5fd90480-da57-11eb-8a4d-7c7ba02b3f41.png)  
     위에 설명했던 컴포넌트의 특성을 살려 동등 레벨의 컴포넌트(부모가 동일한)가 데이터를 전달하려면, **emit(상위 컴포넌트로 전달) -> props(하위 컴포넌트로 전달)** 과정을 거쳐야 한다.
 
 만일 같은 레벨의 header와 footer 사이 데이터 전달이 필요하다면 먼저 `body`에 데이터를 전달해야한다. `($emit)`
