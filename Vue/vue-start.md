@@ -104,3 +104,8 @@ vue 프로젝트 필수 구조
         "vue-template-compiler": "^2.6.11"
     }
     ```
+### vue 프로젝트 실행하기  
+Vue Cli는 개발 서버를 내장하고 있다. 로컬 환경에서 실행하려면 `npm run serve`를 입력하면 된다.  
+```bash
+    npm run serve
+```
