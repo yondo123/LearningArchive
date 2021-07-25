@@ -26,6 +26,7 @@
   
 + **알고리즘**
   + [**(레벨2) 예상 대진표**](https://github.com/yondo123/LearningArchive/blob/master/Java/Algorithm/tournament.md)
+  + [**(레벨2) 124 나라**](https://github.com/yondo123/LearningArchive/blob/master/Java/Algorithm/124-world.md)
 
 ### JavaScript
 + **기본 문법**
