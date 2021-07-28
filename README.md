@@ -51,6 +51,7 @@
   + [**스크롤이벤트**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Pattern/scroll-event.md)
 + **알고리즘**
   + [**카카오2019-인형뽑기**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Algorithm/kakao2019_crane.js)
+  + [**카카오2019-오픈채팅**](https://github.com/yondo123/LearningArchive/blob/master/JavaScript/Algorithm/kakao2019-open-chat.js)
 
 ### Vue
   + [**Vue 기본 구조**](https://github.com/yondo123/LearningArchive/blob/master/Vue/vue-start.md)
